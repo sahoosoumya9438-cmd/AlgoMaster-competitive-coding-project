@@ -1,0 +1,149 @@
+.binary-search-form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.binary-search-form label {
+  color: #aeb6d0;
+  font-size: 12px;
+}
+
+.binary-search-form input {
+  min-width: 160px;
+  flex: 1;
+  padding: 12px 13px;
+  border: 1px solid #343a50;
+  border-radius: 8px;
+  outline: none;
+  background: #0d1018;
+  color: #f8fafc;
+  font-size: 14px;
+}
+
+.binary-search-form input:focus {
+  border-color: #8b5cf6;
+}
+
+.binary-search-form button,
+.sort-controls button {
+  padding: 11px 15px;
+  border-radius: 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.binary-search-form button:disabled,
+.sort-controls button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.binary-message {
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid #35394a;
+  border-radius: 8px;
+  background: #171a26;
+  color: #c8cce0;
+  font-size: 12px;
+}
+
+.binary-message.success {
+  border-color: #22c55e66;
+  color: #bbf7d0;
+}
+
+.binary-panel-heading {
+  margin-top: 30px;
+}
+
+.binary-bars {
+  display: flex;
+  min-height: 340px;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 30px 8px 0;
+  border-bottom: 1px solid #35394a;
+  background-image: linear-gradient(#ffffff07 1px, transparent 1px);
+  background-size: 100% 60px;
+}
+
+.binary-bar-column {
+  display: flex;
+  min-width: 12px;
+  max-width: 38px;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.binary-marker {
+  min-height: 12px;
+  color: #c4b5fd;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.binary-bar-value {
+  margin-bottom: 5px;
+  color: #c5c9d8;
+  font-size: 9px;
+}
+
+.binary-bar {
+  width: 100%;
+  min-height: 8px;
+  max-width: 32px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, #a78bfa, #7557dc);
+  transition: height 0.15s ease, background 0.15s ease;
+}
+
+.binary-bar.low {
+  background: linear-gradient(180deg, #7dd3fc, #0284c7);
+}
+
+.binary-bar.high {
+  background: linear-gradient(180deg, #f0abfc, #c026d3);
+}
+
+.binary-bar.middle {
+  background: linear-gradient(180deg, #fdba74, #f97316);
+}
+
+.binary-bar.found {
+  background: linear-gradient(180deg, #86efac, #16a34a);
+}
+
+.binary-bar-index {
+  padding: 8px 0;
+  color: #737b90;
+  font-size: 9px;
+}
+
+.binary-legend-low {
+  background: #38bdf8;
+}
+
+.binary-legend-high {
+  background: #e879f9;
+}
+
+@media (max-width: 500px) {
+  .binary-bars {
+    justify-content: flex-start;
+  }
+
+  .binary-search-form {
+    align-items: stretch;
+  }
+
+  .binary-search-form input {
+    flex-basis: 100%;
+  }
+}

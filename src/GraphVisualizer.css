@@ -1,0 +1,115 @@
+.graph-canvas {
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid #252a3a;
+  border-radius: 10px;
+  background-image:
+    linear-gradient(#ffffff06 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff06 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.graph-canvas svg {
+  display: block;
+  width: 100%;
+  height: 360px;
+}
+
+.graph-edge {
+  stroke: #3b4258;
+  stroke-width: 1.4;
+  transition: stroke 0.18s ease, stroke-width 0.18s ease;
+}
+
+.graph-edge.explored {
+  stroke: #2fa968;
+}
+
+.graph-edge.active {
+  stroke: #fb923c;
+  stroke-width: 2.4;
+}
+
+.graph-node circle {
+  fill: #27223d;
+  stroke: #8b7aff;
+  stroke-width: 1.4;
+  transition: fill 0.18s ease, stroke 0.18s ease, r 0.18s ease;
+}
+
+.graph-node text {
+  fill: #f1f2f9;
+  font-family: "DM Sans", sans-serif;
+  font-size: 5px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+
+.graph-node.visited circle {
+  fill: #166534;
+  stroke: #86efac;
+}
+
+.graph-node.active circle {
+  fill: #c2410c;
+  stroke: #fdba74;
+  stroke-width: 2;
+}
+
+.graph-traversal {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid #252a3a;
+}
+
+.graph-traversal-label {
+  min-width: 110px;
+  color: #9299ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.graph-order {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.graph-order-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 1px solid #8b5cf638;
+  border-radius: 6px;
+  background: #8b5cf610;
+  color: #d8ccff;
+  font-size: 10px;
+}
+
+.graph-order-step small {
+  color: #8f96a9;
+}
+
+.graph-empty-order {
+  color: #737b90;
+  font-size: 11px;
+}
+
+@media (max-width: 500px) {
+  .graph-canvas,
+  .graph-canvas svg {
+    min-height: 290px;
+    height: 290px;
+  }
+
+  .graph-traversal {
+    flex-direction: column;
+  }
+}
